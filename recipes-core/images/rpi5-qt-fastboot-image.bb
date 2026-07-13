@@ -46,7 +46,6 @@ IMAGE_INSTALL:append = " \
 IMAGE_INSTALL:append = " \
     qtbase \
     qtdeclarative \
-    qtquickcontrols2 \
     qtshadertools \
 "
 
