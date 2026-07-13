@@ -37,7 +37,6 @@ IMAGE_INSTALL:append = " \
 # ---------------------------------------------------------------
 IMAGE_INSTALL:append = " \
     rpi-gpio \
-    libraspberrypi \
     userland \
 "
 
