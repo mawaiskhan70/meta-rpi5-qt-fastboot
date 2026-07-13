@@ -20,7 +20,16 @@ IMAGE_FEATURES += " \
 IMAGE_INSTALL:append = " \
     packagegroup-core-boot \
     kernel-modules \
-    linux-firmware-rpidistro \
+"
+
+# ---------------------------------------------------------------
+# RPi5 WiFi firmware — split packages, no top-level meta-package
+# BCM43455 is the onboard WiFi chip on RPi5
+# ---------------------------------------------------------------
+IMAGE_INSTALL:append = " \
+    linux-firmware-rpidistro-bcm43455 \
+    linux-firmware-rpidistro-bcm43456 \
+    linux-firmware-rpidistro-module-conf \
 "
 
 # ---------------------------------------------------------------
@@ -43,8 +52,7 @@ IMAGE_INSTALL:append = " \
 "
 
 # ---------------------------------------------------------------
-# Application — commented out until recipe is ready
-# Uncomment after first successful boot is verified
+# Application — commented out until first boot verified
 # ---------------------------------------------------------------
 # IMAGE_INSTALL:append = " rpi5-ui"
 
